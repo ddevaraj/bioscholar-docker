@@ -1,4 +1,4 @@
-# bioscholar-docker
+# Bioscholar Docker
 Dockerization of bioscholar application 
 
 ## Installation Instructions
@@ -14,4 +14,4 @@ Clone the docker repository into the bioscholar folder. Further instructions to 
 ## Future Enhancements
 
 * Dockerize BRAT tool
-* Host bioscholar on a server 
+* Host bioscholar on server 
