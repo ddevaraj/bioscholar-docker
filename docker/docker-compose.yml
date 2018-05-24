@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  mysql-dev:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: evidx
+    ports:
+      - "3306:3306"
+
+  client:
+    image: mysql:latest
+    depends_on:
+      - mysql-dev
+    command: mysql -uroot -p1234 -hmysql-dev evidx 
+
+  tomcat:
+    build:
+      context: /Users/deepthidevaraj/Documents/bioScholar/docker/
+      dockerfile: Dockerfile   
+    image: tomcat
+    ports:
+      - "8888:8080"
+    
+   
